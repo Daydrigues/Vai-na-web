@@ -1,0 +1,101 @@
+// Variáveis
+$primary-color: #f4c2c2;
+$secondary-color: #ffffff;
+$text-color: #333;
+$border-radius: 8px;
+
+// Estilos Globais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $secondary-color;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 1rem;
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $text-color;
+          margin: 0 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.section {
+    padding: 2rem;
+  
+    .content {
+      display: flex; /* Configura o layout em linha */
+      align-items: center; /* Alinha verticalmente os itens */
+      gap: 1rem; /* Espaço entre imagem e texto */
+  
+      img {
+        flex: 1; /* Imagem ocupa 1 parte proporcional */
+        max-width: 50%; /* Limita largura da imagem */
+        height: auto; /* Mantém a proporção */
+        border-radius: 8px; /* Bordas arredondadas */
+      }
+  
+      p {
+        flex: 2; /* Texto ocupa 2 partes proporcionais */
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify; /* Justifica o texto */
+      }
+    }
+  }
+  
+.section {
+  padding: 2rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: $border-radius;
+  }
+
+  &.tips {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .tip {
+      flex: 1 1 200px;
+      margin: 1rem;
+      text-align: center;
+
+      img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
